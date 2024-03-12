@@ -1,0 +1,6 @@
+/svg path 애니메이션 적용 방법
+https://kimsangjun.tistory.com/99
+
+/개쩌는 블로그
+https://kimsangjun.tistory.com/
+https://blog.devari.kr/2017/publishing/web-page-loading

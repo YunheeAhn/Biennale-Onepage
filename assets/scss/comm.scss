@@ -1,0 +1,81 @@
+@import "variables", "mixins", "fonts", "resets";
+
+body {
+    background-color: $Sub-Green;
+}
+// 페이지 레이아웃
+.page-section {
+    position: relative
+}
+svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%
+}
+
+#header {
+    position: fixed;
+    top: 19px;
+    left: 19px;
+    right: 19px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+
+    z-index: 99;
+
+    height: $hd-height;
+
+    h1 {
+        height: $hd-height;
+        border-radius: $borderRadius-logo;
+        background: #ffffff4d;
+
+        a {
+            display: block;
+            height: $hd-height;
+            white-space: pre-line;
+
+            backdrop-filter: saturate(1000%) blur(20px);
+            -webkit-backdrop-filter: saturate(1000%) blur(20px);
+            transition: background .2s ease-out;
+        }
+    }
+}
+#nav {
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li {
+            padding: $button-padding;
+            border-radius: $borderRadius-button;
+
+        }
+    }
+}
+
+
+
+.anchor {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 0;
+    margin-top: -75vh
+}
+.layout--scroll {
+    min-height: 100vh
+}
+.layout:last-child {
+    margin-bottom: 0;
+    padding-bottom: 120px
+}
+.layout--scroll>* {
+    position: sticky;
+    top: 160px
+}
