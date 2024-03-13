@@ -1,7 +1,9 @@
 @import "variables", "mixins", "fonts", "resets";
 
 body {
-    background-color: $Sub-Green;
+    background: $Back-DarkPink;
+    overscroll-behavior: none;
+    scroll-behavior: auto;
 }
 // 페이지 레이아웃
 .page-section {
@@ -10,9 +12,25 @@ body {
 svg {
     display: block;
     max-width: 100%;
-    max-height: 100%
+    max-height: 100%;
 }
+// // 다시 재설정 예정
+// .inset {
+//     inset: 0;
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     // overflow: hidden;
 
+//     .inset-transform {
+//         box-sizing: border-box;
+//         overflow: visible;
+//         width: 100%;
+//         // transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -25643, 0, 1);
+//     }
+// }
+
+// 상단 헤더
 #header {
     position: fixed;
     top: 19px;
@@ -29,53 +47,589 @@ svg {
     height: $hd-height;
 
     h1 {
+        width: 180px;
         height: $hd-height;
+
         border-radius: $borderRadius-logo;
-        background: #ffffff4d;
+        background: #ffffff2f;
+    
+        backdrop-filter: saturate(1000%) blur(10px);
+        -webkit-backdrop-filter: saturate(1000%) blur(10px);
+        transition: background-color .2s ease-out;
+
+        @include logoTitle22;
+
+        :hover {
+            background : rgba(255,255,255,.3);
+            border-radius: $borderRadius-logo;
+
+        }
 
         a {
+            width: 100%;
+            height: 100%;
+
             display: block;
-            height: $hd-height;
             white-space: pre-line;
 
-            backdrop-filter: saturate(1000%) blur(20px);
-            -webkit-backdrop-filter: saturate(1000%) blur(20px);
-            transition: background .2s ease-out;
+            padding: 15px;
         }
     }
 }
 #nav {
-
     ul {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
 
+        gap: 15px;
+        
+        :hover {
+            background : rgba(255,255,255,.3);
+            border-radius: $borderRadius-button;
+        }
+
         li {
-            padding: $button-padding;
             border-radius: $borderRadius-button;
 
+            background: #ffffff2f;
+
+            backdrop-filter: saturate(1000%) blur(10px);
+            -webkit-backdrop-filter: saturate(1000%) blur(10px);
+            transition: background-color .2s ease-out;
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: block;
+                padding: $button-padding;
+
+            }
+        }
+    }
+}
+
+// 메인
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    // 스크롤 인디케이터
+    .intro-scroll__indicator {
+        border: 1px solid $Sub-Pink;
+
+        width: 35px;
+        height: 50px;
+
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+
+        transform: translate(-50%);
+        border-radius: 25px;
+        z-index: 100;
+        mix-blend-mode: difference;
+
+        opacity: 0.5;
+    }
+    
+    .intro-scroll__indicator::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: $Main-Pink;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        border-radius: 10px;
+        animation: indicator 1s ease-in-out infinite alternate-reverse
+    }
+    
+    @keyframes indicator {
+        0% {
+            top: 30%;
+            opacity: .5
+        }
+    
+        to {
+            top: 60%;
+            opacity: 1
+        }
+    }
+    // 스크롤 메인 타이틀 모양(svg)
+    .intro-scroll__shape {
+        position: relative;
+        height: 100vh;
+
+        .intro-scroll__shape-transform {
+            position: relative;
+
+            .intro-scroll__shape-transform-wrap {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                position: sticky;
+
+                .intro-scroll__shape-transform-wrap-svg {
+                    width: 100%;
+                    height: 100%;
+                    color: $Main-Pink;
+
+                    svg {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+// 타이틀설명텍스트
+.intro-text__wrap,
+.page-text__wrap {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+
+    padding: 150px 100px 15px 100px;
+    margin: 10px;
+    margin-bottom: none;
+
+    p {
+        color: white;
+    }
+}
+.layout--scroll {
+    min-height: 100vh;
+
+    @include titleDesc48;
+}
+.layout:last-child {
+    margin-bottom: 0;
+    padding-bottom: 120px;
+}
+.layout--scroll>* {
+    position: sticky;
+    top: 160px;
+}
+
+// 각 섹션 레이아웃
+.page-section__details {
+    min-height: auto;
+
+    margin: 30px 30px 0;
+    padding: 150px 200px 30px 200px;
+    
+
+    .inner-layout {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    }
+}
+
+// 첫번째 섹션카드
+.left {
+    margin-right: auto;
+}
+.right {
+    margin-left: auto;
+}
+.card.art {
+    color: $Sub-Orange;
+
+    .card-date {
+        @include transparent-background($Sub-Orange,0.9);
+    }
+}
+.card.architecture {
+    color: $Sub-Green;
+
+    .card-date {
+        @include transparent-background($Sub-Green,0.9);
+    }
+}
+.card.cinema {
+    color: $Main-Pink;
+
+    .card-date {
+        @include transparent-background($Main-Pink,0.9);
+    }
+}
+.card.dance {
+    color: $Sub-Purple;
+
+    .card-date {
+        @include transparent-background($Sub-Purple,0.9);
+    }
+}
+.card.music {
+    color: $Sub-Blue;
+
+    .card-date {
+        @include transparent-background($Sub-Blue,0.9);
+    }
+}
+.card.theatre {
+    color: $Sub-Yellow;
+
+    .card-date {
+        @include transparent-background($Sub-Yellow,0.9);
+    }
+}
+.card {
+    padding: 60px;
+    width: 50%;
+    height: auto;
+
+    :hover {
+        transform: scale(10,10);
+    }
+
+    .card_inner {
+        
+        .card-date {
+            display: inline-block;
+            gap: 10px;
+            padding: $button-padding;
+
+            border-radius: $borderRadius-button;
+
+            backdrop-filter: saturate(1000%) blur(50px);
+            transition: background-color .2s ease-out;
+
+            margin-bottom: 25px;
+
+            @include cardFrontButton18;
+
+            span {
+                color: $white;
+            }
+        }
+        .card-title {
+            margin-bottom: 20px;
+
+            p {
+                @include cardFrontTitle60;
+            }
+        }
+        .card-desc {
+            @include cardFrontDesc22;
+            margin-bottom: 70px;
+        }
+        .card-footer {
+            @include cardFrontInfo18;
+
+            span {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+// 두번재 섹션 카드
+.venues-wrap {
+    width: 50%;
+
+    position: relative;
+    
+    .card2.picture {
+        width: 100%;
+        height: 490px;
+    
+        img {
+            width: 100%;
+            height: 100%;
+    
+            border-radius: $borderRadius;
+        }
+    
+        .card2_inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            width: 100%;
+            height: 490px;
+    
+            padding: 60px;
+    
+            .inner-wrap {
+                width: 100%;
+                height: 100%;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                .card-tit {
+                    @include cardFrontTitle36;
+    
+                    color: $white;
+                }
+                .change-button {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+    
+                    background: $white;
+    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    margin-left: auto;
+    
+                    a::before {
+                        display: block;
+                        content: '\f054';
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+    
+                        color: $Main-Navy;
+    
+                    }
+                }
+            }
+        }
+    }
+
+    .card2.behind {
+        width: 100%;
+        height: 490px;
+
+        background: $Main-Navy;
+        border-radius: $borderRadius;
+
+        padding: 60px;
+
+        .card2_inner {
+            color: $white;
+
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            .card2_inner-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                margin-bottom: 40px;
+
+                .change-button {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+
+                    background: $white;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a::before {
+                        display: block;
+                        content: '\f054';
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+
+                        color: $Main-Navy;
+                    }
+                } 
+                .top-title {
+                    padding: $button-padding;
+
+                    border-radius: $borderRadius-button;
+
+                    background: $white;
+                    color: $Main-Navy;
+
+                    @include cardBackButton12;
+                }  
+            }
+            .card2_inner-mid {
+                margin-bottom: 40px;
+                .mid-venues {
+                    margin-bottom: 20px;
+
+                    @include cardBackTitle20;
+                }
+                .mid-desc {
+                    @include cardBackDesc14;
+                }
+            }
+            .card2_inner-footer {
+                @include cardBackInfo13;
+            }
+        }
+    }
+}
+
+// 두 번째 섹션 카드 애니메이션
+.inner-layout  {
+    .right {
+        position: relative;
+        perspective: 1000px;
+
+        .picture {
+            transition: transform 1s;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+        .behind {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            z-index: -1;
+            perspective: 1;
+            transform: rotateY(-180deg);
+        }
+    }
+}
+.inner-layout  {
+    .left {
+        position: relative;
+        perspective: 1000px;
+
+        .picture {
+            transition: transform 1s;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+        .behind {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            z-index: -1;
+            perspective: 1;
+            transform: rotateY(180deg);
+        }
+    }
+}
+// gsap으로 변경하기
+.right:hover {
+    .picture {
+        transform: rotateY(180deg);
+    }
+    .behind {
+        transform: rotateY(0deg);
+    }
+}
+.left:hover {
+    .picture {
+        transform: rotateY(-180deg);
+    }
+    .behind {
+        transform: rotateY(0deg);
+    }
+}
+
+
+// 세번쨰 섹션
+.card3-wrap {
+    border-radius: $borderRadius;
+
+    position: relative;
+    width: 80%;
+
+    .card3-wrap_phto {
+        width: 100px;
+        img {
+            object-fit: contain;
+            border-radius: $borderRadius;
+        }
+        p {
+            position: absolute;
+            right: 60px;
+            bottom: 60px;
+
+            color: $white;
+            @include cardFrontTitle36
         }
     }
 }
 
 
+// 타이틀텍스트 레이아웃
+.title-fixed{
+    mix-blend-mode: color-dodge;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity .5s ease-out;
 
+    .hidden {
+        opacity: 0;
+        transition: opacity .5s ease-out
+    }
+}
+
+.title-fixed svg {
+    transform: rotate(-90deg);
+    scale: .75;
+    overflow: unset
+}
+
+@media (max-width: 860px) {
+    .title-fixed svg {
+        scale:.6
+    }
+}
+
+.title-fixed--inView {
+    transition: .5s ease-out;
+    transform: translateY(30px);
+    opacity: 0
+}
+
+.title-fixed.hidden {
+    opacity: 0;
+    transition: opacity .5s ease-out
+}
+
+// 앵커
 .anchor {
     position: absolute;
     display: block;
     width: 1px;
     height: 0;
-    margin-top: -75vh
+    margin-top: -75vh;
 }
-.layout--scroll {
-    min-height: 100vh
-}
-.layout:last-child {
-    margin-bottom: 0;
-    padding-bottom: 120px
-}
-.layout--scroll>* {
-    position: sticky;
-    top: 160px
+
+
+// 하단 풋터
+#footer {
+    background: $Main-Orange;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 30px 30px 0 30px;
+    padding: 30px;
+
+    height: auto;
+
+    border-radius: 15px 15px 0 0;
+
+    gap: 30px;
+    
+    .footer-item {
+        width: 33.3%;
+
+        color: $Main-Green;
+    }
 }
