@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA VIENNALE DI VENEZIA</title>
+    <title>LA BIENNALE DI VENEZIA</title>
     
     <!-- 오픈그래프 -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="LA VIENNALE DI VENEZIA" />
-    <meta property="og:description" content="This is a Website for interaction onepage" />
+    <meta property="og:title" content="LA BIENNALE DI VENEZIA" />
+    <meta property="og:description" content="This is a Website for interaction-onePage" />
     <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
     <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
     <!-- 트위터카드 -->
     <meta name="twitter:card" content="website" />
-    <meta name="twitter:title" content="LA VIENNALE DI VENEZIA" />
-    <meta name="twitter:description" content="This is a Website for interaction onepage" />
+    <meta name="twitter:title" content="LA BIENNALE DI VENEZIA" />
+    <meta name="twitter:description" content="This is a Website for interaction-onePage" />
     <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
     <meta name="twitter:domain" content="사이트 명" />
 
@@ -45,8 +45,7 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="#">
-                la BIENNALE
+        <h1><a href="#">la BIENNALE
                 di Venezia
                 2024
             </a>
@@ -62,17 +61,23 @@
     </header>
     <main id="main">
         <div class="inset">
-            <div class="inset-wrap">
+            <div class="inset-transform">
                 <!-- 최상단 인트로 -->
                 <header class="intro">
-                    <div class="instro-scroll__indicator"></div><!-- after로 스크롤 아이콘 넣기 -->
+                    <div class="intro-scroll__indicator"></div><!-- after로 스크롤 아이콘 넣기 -->
                     <div class="intro-scroll__shape">
-                        <div class="intro-scroll__shape-svg">
-                            <!-- 메인이미지 -->
-                            <!-- 1. 찢어진모양 -->
-                            <!-- 2. 라비엔날레디베네치아 -->
-                            <!-- 3. 포리너스에브리웨어 -->
+                        <div class="intro-scroll__shape-transform">
+                            <div class="intro-scroll__shape-transform-wrap">
+                                <div class="intro-scroll__shape-transform-wrap-svg">
+                                    <!-- 메인이미지 -->
+                                    <!-- 1. 찢어진모양 .intro-shpe-in-->
+                                    <!-- 2. 라비엔날레디베네치아 opacity 0  .intro-shape-middle-->
+                                    <!-- 3. 포리너스에브리웨어 .intro-shape-out -->
+                                </div>
+                            </div>
                         </div>
+
+                        
                     </div>
                 </header>
                 <div class="intro-text layout--scroll">
@@ -88,28 +93,30 @@
                         <div class="TitleSection-shape_transform">
                             <div class="pin-spacer">
                                 <div class="TitleSection-shapeWrapper__svg">
-                                    <!-- 1. 찌그러진 텍스트 svg 태그 넣기 -->
-                                    <!-- 2. 멀쩡한 텍스트 svg 태그 넣기 -->
+                                    <div class="TitleSection-shapeWrapper__svg-shape">
+                                        <!-- 1. 찌그러진 텍스트 svg 태그 넣기 .shape-in -->
+                                        <!-- 2. 멀쩡한 텍스트 svg 태그 넣기 .shape-out -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </header>
                     <span class="anchor" id="Department"></span>
-                    <div class="page-text">
-                        <div class="page-text__wrap">
+                    <div class="page-text layout--scroll">
+                        <div class="page-text__wrap richtext">
                             <p>La Biennale di Venezia was established in 1895 and is today acknowledged as one of the most prestigious cultural institutions. La Biennale di Venezia stands at the forefront of research and promotion of new contemporary art trends and organizes events in all its specific Departments: Art (1895), Architecture (1980), Cinema (1932), Dance (1999), Music (1930), and Theatre (1934) - alongside research and training activities.</p>
                         </div>
                     </div>
 
                     <!-- 상세 내용 -->
-                    <section class="page-section__detail">
+                    <section class="page-section__details">
                         <div class="inner-layout">
-                            <div class="card art">
-                                <div class="card_inner left">
+                            <div class="card art left">
+                                <div class="card_inner">
                                     <div class="card-date">
-                                        <p>2024</p>
-                                        <p>04.02</p>
-                                        <p>11.24</p>
+                                        <span>2024</span>
+                                        <span>04.02</span>
+                                        <span>11.24</span>
                                     </div>
                                     <div class="card-title">
                                         <p>ART</p>
@@ -123,12 +130,12 @@
                                 </div>
                             </div>
 
-                            <div class="card architecture">
-                                <div class="card_inner right">
+                            <div class="card architecture right">
+                                <div class="card_inner">
                                     <div class="card-date">
-                                        <p>2024</p> 
-                                        <p>05.20</p>
-                                        <p>11.26</p>
+                                        <span>2024</span> 
+                                        <span>05.20</span>
+                                        <span>11.26</span>
                                     </div>
                                     <div class="card-title">
                                         <p>ARCHITECTURE</p>
@@ -142,12 +149,12 @@
                                 </div>
                             </div> 
 
-                            <div class="card cinema">
-                                <div class="card_inner left">
+                            <div class="card cinema left">
+                                <div class="card_inner">
                                     <div class="card-date"> 
-                                        <p>2024</p>
-                                        <p>08.28</p>
-                                        <p>09.07</p>
+                                        <span>2024</span>
+                                        <span>08.28</span>
+                                        <span>09.07</span>
                                     </div>
                                     <div class="card-title">
                                         <p>CINEMA</p>
@@ -161,12 +168,12 @@
                                 </div>
                             </div>
 
-                            <div class="card dance">
-                                <div class="card_inner right">
+                            <div class="card dance right">
+                                <div class="card_inner">
                                     <div class="card-date">
-                                        <p>2024</p> 
-                                        <p>07.18</p>
-                                        <p>08.03</p>
+                                        <span>2024</span> 
+                                        <span>07.18</span>
+                                        <span>08.03</span>
                                     </div>
                                     <div class="card-title">
                                         <p>Dance</p>
@@ -175,17 +182,17 @@
                                         <p>The 18th International Festival of Contemporary Dance will run from 18 July to 3 August 2024, directed by Wayne McGregor.</p>
                                     </div>
                                     <div class="card-footer">
-                                        <p>BIENNALE ARTE 2024</p>
+                                        <span>BIENNALE ARTE 2024</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="card music">
-                                <div class="card_inner left">
+                            <div class="card music left">
+                                <div class="card_inner">
                                     <div class="card-date"> 
-                                        <p>2024</p>
-                                        <p>09.06</p>
-                                        <p>10.10</p>
+                                        <span>2024</span>
+                                        <span>09.06</span>
+                                        <span>10.10</span>
                                     </div>
                                     <div class="card-title">
                                         <p>music</p>
@@ -199,12 +206,12 @@
                                 </div>
                             </div>
                             
-                            <div class="card theatre">
-                                <div class="card_inner right">
+                            <div class="card theatre right">
+                                <div class="card_inner">
                                     <div class="card-date">
-                                        <p>2024</p> 
-                                        <p>06.15</p>
-                                        <p>06.30</p>
+                                        <span>2024</span> 
+                                        <span>06.15</span>
+                                        <span>06.30</span>
                                     </div>
                                     <div class="card-title">
                                         <p>theatre</p>
@@ -227,46 +234,51 @@
                         <div class="TitleSection-shape_transform">
                             <div class="pin-spacer">
                                 <div class="TitleSection-shapeWrapper__svg"> 
-                                    <!-- 1. 찌그러진 텍스트 svg 태그 넣기 -->
-                                    <!-- 2. 멀쩡한 텍스트 svg 태그 넣기 -->
+                                    <div class="TitleSection-shapeWrapper__svg-shape">
+                                        <!-- 1. 찌그러진 텍스트 svg 태그 넣기 -->
+                                        <!-- 2. 멀쩡한 텍스트 svg 태그 넣기 -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </header> 
                     <span class="anchor" id="Venues"></span>
-                    <div class="page-text">
-                        <div class="page-text__wrap">
+                    <div class="page-text layout--scroll">
+                        <div class="page-text__wrap richtext">
                             <p>La Biennale di Venezia was established in 1895 and is today acknowledged as one of the most prestigious cultural institutions. La Biennale di Venezia stands at the forefront of research and promotion of new contemporary art trends and organizes events in all its specific Departments: Art (1895), Architecture (1980), Cinema (1932), Dance (1999), Music (1930), and Theatre (1934) - alongside research and training activities.</p>
                         </div>
                     </div>
                     <!-- 상세 내용 -->
-                    <section class="page-section__inner">
+                    <section class="page-section__details">
                         <div class="inner-layout">
-
-                            <div class="venues-wrap 01">
-                                <div class="card art-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner left">
+                            <div class="venues-wrap 01 left">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_art-giardinidella.jpg" alt="art_venue" class="card2-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Art</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Art</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card art-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Art</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">GIARDINI DELLA BIENNALE</div>
                                             <div class="mid-desc">
                                                 <p>The traditional site of the Biennale Arte Exhibitions since the first edition in 1895, the Giardini rise to the eastern edge of Venice and were made by Napoleon at the beginning of the nineteenth century.</p>
                                             </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>SESTIERE CASTELLO 30122 VENICE</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -274,30 +286,34 @@
                                 </div>
                             </div>
 
-                            <div class="venues-wrap 02">
-                                <div class="card architecture-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner right">
+                            <div class="venues-wrap 02 right">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_archive-biennaleLibrary.jpg" alt="archi_venue" class="card2-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Architecture</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Architecture</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card architecture-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Architecture</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">ARSENALE</div>
                                             <div class="mid-desc">
                                                 <p>The traditional site of the Biennale Arte Exhibitions since the first edition in 1895, the Giardini rise to the eastern edge of Venice and were made by Napoleon at the beginning of the nineteenth century.</p>
                                             </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>SESTIERE CASTELLO CAMPO DELLA TANA 169/F 30122 VENICE</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -305,31 +321,34 @@
                                 </div>
                             </div>
 
-                            <div class="venues-wrap 03">
-                                <div class="card dance-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner left">
+                            <div class="venues-wrap 03 left">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_dmt-ca'giustinian.jpg" alt="dance_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Dance</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Dance</p>
                                         </div>
                                     </div>
                                 </div>
-    
-                                <div class="card dance-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>                                            
                                             <p class="top-title">Dance</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">CA' GIUSTINIAN</div>
                                             <div class="mid-desc">
                                                 <p>Overlooking the San Marco Basin, the head office of La Biennale di Venezia is an historical palace among the most representative of the Venetian late Gothic style.</p>
-                                                <p>The rooms have been completed with selected artistic works of Art, placed in order to enhance the relationship between Art and space. Light is the other characterizing element of the location.</p>
                                             </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>SESTIERE CASTELLO CAMPO DELLA TANA 169/F 30122 VENICE</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -337,30 +356,34 @@
                                 </div>
                             </div>
 
-                            <div class="venues-wrap 04">
-                                <div class="card MusicandTheatre-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner right">
+                            <div class="venues-wrap 04 right">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_dmt-arsenale.jpg" alt="music-theatre_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Music&Theatre</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Music&Theatre</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card MusicandTheatre-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Music / Theatre</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">ARSENALE</div>
                                             <div class="mid-desc">
                                                 <p>Following a restoration process started in 2000, the Teatro Piccolo Arsenale - formerly a cinema -, the Teatro alle Tese, located at the Tese, Cinquecentesche, and the Sale d'Armihave become the venues for the shows of the Dance, Music and Theatre Departments.</p>
                                                 </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>SESTIERE CASTELLO CAMPO DELLA TANA 2169/F 30122 VENICE</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -368,30 +391,34 @@
                                 </div>
                             </div>  
 
-                            <div class="venues-wrap 05">
-                                <div class="card cinema1-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner left">
+                            <div class="venues-wrap 05 left">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_cinema-palazzoDelCinema.jpg" alt="cinema1_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Cinema</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Cinema</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card cinema1-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Cinema</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">PALAZZO DEL CINEMA</div>
                                             <div class="mid-desc">
                                                 <p>The Palazzo del Cinema on the Lido di Venezia is the main headquarters for the Venice International Film Festival. Built in record time in the Modernist style of the time, it was inaugurated on August 10th 1937 for the fifth edition of the Festival.</p>
                                                 </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>LUNGOMARE MARCONI 30126 LIDO DI VENEZIA</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -399,31 +426,34 @@
                                 </div>
                             </div>
 
-                            <div class="venues-wrap 06">
-                                <div class="card cinema2-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner right">
+                            <div class="venues-wrap 06 right">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_cinema-palazzoDelCasino.jpg" alt="cinema2_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Cinema</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Cinema</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card cinema2-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Cinema</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">PALAZZO DEL CASINO</div>
                                             <div class="mid-desc">
-                                                <p>The monumental building of the Palazzo del Casinò was designed by the Chief Engineer of the City of Venice EugenioMiozzi in the Rationalist style, influenced by the Fascist architecture of the 1930s and built in the re cord time of 8 months in 1938.</p>
                                                 <p>The Palazzo has since been used by the Biennale for the Venice International Film Festival, mainly to house press services and a s a venue for screenings for the public and professional visitors.</p>
                                                 </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>LUNGOMARE MARCONI 30126 LIDO DI VENEZIA</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -432,30 +462,34 @@
                             </div>
 
 
-                            <div class="venues-wrap 07">
-                                <div class="card cinema3-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner left">
+                            <div class="venues-wrap 07 left">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_cinema-palabiennale.jpg" alt="cinema3_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Cinema</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Cinema</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card cinema3-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Cinema</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">PALABIENNALE</div>
                                             <div class="mid-desc">
-                                                <p>The PalaBiennale is a temporary screening theatre that hosts screenings for the public. It is the venue with the largest audience of the Festival, and a seating capacity of 1,760 This theatre hosts the much appreciated evening double screening for the audience, that in recent years has become a must-go ev ent for film lovers and the Venice Film Festival attenders. During the day, the PalaBiennale hosts screenings for both the public an d accredited visitors.</p>
+                                                <p>A temporary screening theatre that hosts screenings for the public. It's the venue with the largest audience of the Festival, and a seating capacity of 1,760 This theatre hosts the much appreciated evening double screening for the audience, that in recent years has become a must-go event for film lovers and the Venice Film Festival attenders.</p>
                                                 </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>VIA SANDRO GALLO 86 30126 LIDO DI VENEZIA</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -463,30 +497,34 @@
                                 </div>
                             </div>
 
-                            <div class="venues-wrap 08">
-                                <div class="card cinema4-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner right">
+                            <div class="venues-wrap 08 right">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_cinema-salaGiardino.jpg" alt="cinema4_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Cinema</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Cinema</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card cinema4-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Cinema</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">SALA GIARDINO</div>
                                             <div class="mid-desc">
-                                                <p>The Sala Giardino, opened in 2016, is 35x2 5 meters sized and a total height of 11 meters. The theatre hosts 568 seats, with a screen of 6x14 meters and is equipped with the most advanced technologies: Dolby 7. 1, possibility of 3D, film and digital projections. The structure also has room light swith a motorized system for the lighting of events and delegations, amplification system and devices for simultaneous translation.</p>
+                                                <p>The Sala Giardino, opened in 2016, is 35x2 5 meters sized and a total height of 11 meters. The theatre hosts 568 seats, with a screen of 6x14 meters and is equipped with the most advanced technologies: Dolby 7. 1, possibility of 3D, film and digital projections.</p>
                                                 </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>LUNGOMARE MARCONI 30126 LIDO DI VENEZIA</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -494,24 +532,28 @@
                                 </div>
                             </div>
 
-                            <div class="venues-wrap 09">
-                                <div class="card cinema5-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner left">
+                            <div class="venues-wrap 09 left">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_cinema-outdoorAreas.jpg" alt="cinema5_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
-                                            <strong class="card-tit">Cinema</strong>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="card-tit">Cinema</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="card cinema5-behind">
-                                    <div class="card_inner">
-                                        <div class="card_inner-top">
-                                            <button class="go-back"></button>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <p class="top-title">Cinema</p>
                                         </div>
-                                        <div class="card_inner-mid">
+                                        <div class="card2_inner-mid">
                                             <div class="mid-venues">OUTDOOR AREAS</div>
                                             <div class="mid-desc">
                                                 <ul>
@@ -520,8 +562,9 @@
                                                     <li>Terrazza Biennale</li>
                                                     <li>Venice Immersive Island</li>
                                                 </ul>
+                                            </div>
                                         </div>
-                                        <div class="card_inner-footer">
+                                        <div class="card2_inner-footer">
                                             <p>LUNGOMARE MARCONI 30126 LIDO DI VENEZIA</p>
                                             <p>TEL. +39 0415218711</p>
                                         </div>
@@ -529,37 +572,43 @@
                                 </div>
                             </div>
 
-                            <div class="venues-wrap 10">
-                                <div class="card archive-picture">
-                                    <img src="" alt="" class="card-imge">
-                                    <div class="card_inner right">
+                            <div class="venues-wrap 09 right">
+                                <div class="card2 picture">
+                                    <img src="./assets/images/venues_archive-biennaleLibrary.jpg" alt="archive_venue" class="card-imge">
+                                    <div class="card2_inner">
                                         <div class="inner-wrap">
-                                            <button class="change-button"></button>
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
                                             <strong class="card-tit">Archive</strong>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card archive-behind">
-                                <div class="card_inner">
-                                    <div class="card_inner-top">
-                                        <button class="go-back"></button>
-                                        <p class="top-title">archive</p>
+                                <div class="card2 behind">
+                                    <div class="card2_inner">
+                                        <div class="card2_inner-top">
+                                            <button class="change-button">
+                                                <a href="#"></a>
+                                            </button>
+                                            <p class="top-title">archive</p>
+                                        </div>
+                                        <div class="card2_inner-mid">
+                                            <div class="mid-venues">GIARDINI DELLA BIENNALE</div>
+                                            <div class="mid-desc">
+                                                <p>The traditional site of the Biennale Art Exhibitions since the first edition in 1895, the Giardini rise to the eastern edge of Venice and were made by Napoleon at the beginning of the nineteenth century. The pavilions can be visited during the exhibitions period.</p>
+                                        </div>
                                     </div>
-                                    <div class="card_inner-mid">
-                                        <div class="mid-venues">GIARDINI DELLA BIENNALE</div>
-                                        <div class="mid-desc">
-                                            <p>The traditional site of the Biennale Art Exhibitions since the first edition in 1895, the Giardini rise to the eastern edge of Venice and were made by Napoleon at the beginning of the nineteenth century. The pavilions can be visited during the exhibitions period.</p>
-                                    </div>
-                                    <div class="card_inner-footer">
+                                    <div class="card2_inner-footer">
                                         <p>SESTIERE CASTELLO 30122 VENEZIA</p>
                                         <p>TEL. +39 0415218711</p>
                                     </div>
                                 </div>
+    
+                            </div>
                             </div>
 
-                        </div>
+                    
                     </section>
                 </section>
 
@@ -568,7 +617,7 @@
                     <header class="TitleSection">
                         <div class="TitleSection-shape_transform">
                             <div class="pin-spacer">
-                                <div class="TitleSection-shapeWrapper__svg">
+                                <div class="TitleSection-shapeWrapper__svg-shape">
                                     <!-- 1. 찌그러진 텍스트 svg 태그 넣기 -->
                                     <!-- 2. 멀쩡한 텍스트 svg 태그 넣기 -->
                                 </div>
@@ -576,19 +625,102 @@
                         </div>
                     </header>
                     <span class="anchor" id="Archive"></span>
-                    <div class="page-text">
-                        <div class="page-text__wrap">
+                    <div class="page-text layout--scroll">
+                        <div class="page-text__wrap richtext">
                             <p>La Biennale di Venezia was established in 1895 and is today acknowledged as one of the most prestigious cultural institutions. La Biennale di Venezia stands at the forefront of research and promotion of new contemporary art trends and organizes events in all its specific Departments: Art (1895), Architecture (1980), Cinema (1932), Dance (1999), Music (1930), and Theatre (1934) - alongside research and training activities.</p>
                         </div>
                     </div>
+                    <!-- 상세내용 -->
+                    <section class="page-section__details">
+                        <div class="inner-layout">
+                            <div class="card3-wrap left">
+                                <div class="card3-wrap_phto">
+                                    <img src="./assets/images/archive-1895~1945.jpg" alt="/">
+                                    <p>1895~1945</p>
+                                </div>
+                            </div>
+
+                            <div class="card3-wrap right">
+                                <div class="card3-wrap_phto">
+                                    <img src="./assets/images/archive-1948~1973.jpg" alt="/">
+                                    <p>1948~1973</p>
+                                </div>
+                            </div>
+
+                            <div class="card3-wrap left">
+                                <div class="card3-wrap_phto">
+                                    <img src="./assets/images/archive-1974~1998.jpg" alt="/">
+                                    <p>1971~1998</p>
+                                </div>
+                            </div>
+
+                            <div class="card3-wrap right">
+                                <div class="card3-wrap_phto">
+                                    <img src="./assets/images/archive-1999~2023.jpg" alt="/">
+                                    <p>1999~2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </section>
+
+                <!-- 풋터 -->
+                <footer id="footer" class="footer">
+                    <div class="footer-item">
+                        <h2 class="footer-title">Contact US</h2>
+                        <div class="footer-item__inner">
+                            <ul class="footer-item__inner-list">
+                                <li class="list-item">Ca' Giustinian, San Marco 1364/A</li>
+                                <li class="list-item">30124 VENICE</li>
+                                <li class="list-item">TEL +39 041 5218711</li>
+                                <li class="list-item">email info@labiennale.org</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <h2 class="footer-title">PRESS</h2>
+                        <div class="footer-item__inner">
+                            <ul class="footer-item__inner-list">
+                                <li class="list-item">Press Office info and contact persons:</li>
+                                <li class="list-item">Art, Architecture / Cinema / Dance, Music, Theatre</li>
+                                <li class="list-item">Ca' Giustinian, San Marco </li>
+                                <li class="list-item">1364/A Venice</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <h2 class="footer-title">Follow us on</h2>
+                            <div class="footer-item__inner">
+                                <ul class="footer-item__inner-contactlist">
+                                    <li class="contactlist-item t"><a href="#">트위터</a></li>
+                                    <li class="contactlist-item f"><a href="#">페이스북</a></li>
+                                    <li class="contactlist-item y"><a href="#">유튜브</a></li>
+                                    <li class="contactlist-item i"><a href="#">인스타그램</a></li>
+                                    <li class="contactlist-item l"><a href="#">링크드인</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </footer>
             </div>
 
         </div>
         <div class="titles">
-            <div class="title-departments"></div>
-            <div class="title-venues"></div>
-            <div class="title-archive"></div>
+            <div class="title-departments title-fixed">
+                <svg>
+                    <!-- .shape-in -->
+                </svg>
+            </div>
+            <div class="title-venues title-fixed">
+                <svg>
+                    <!-- .shape-in -->
+                </svg>
+            </div>
+            <div class="title-archive title-fixed">
+                <svg>
+                    <!-- .shape-in -->
+                </svg>
+            </div>
         </div>
 
     </main> 
