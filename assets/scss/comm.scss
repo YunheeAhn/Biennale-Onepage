@@ -472,7 +472,8 @@ svg {
 }
 
 // 두 번째 섹션 카드 애니메이션
-.inner-layout  {
+.venue {
+    .inner-layout  {
     .right {
         position: relative;
         perspective: 1000px;
@@ -494,25 +495,28 @@ svg {
         }
     }
 }
-.inner-layout  {
-    .left {
-        position: relative;
-        perspective: 1000px;
-
-        .picture {
-            transition: transform 1s;
-            backface-visibility: hidden;
-            transform-style: preserve-3d;
-        }
-        .behind {
-            position: absolute;
-            left: 0;
-            top: 0;
-            transition: transform 1s;
-            transform-style: preserve-3d;
-            z-index: -1;
-            perspective: 1;
-            transform: rotateY(180deg);
+}
+.venue {
+    .inner-layout  {
+        .left {
+            position: relative;
+            perspective: 1000px;
+    
+            .picture {
+                transition: transform 1s;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+            }
+            .behind {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transition: transform 1s;
+                transform-style: preserve-3d;
+                z-index: -1;
+                perspective: 1;
+                transform: rotateY(180deg);
+            }
         }
     }
 }
@@ -539,11 +543,13 @@ svg {
 .card3-wrap {
     border-radius: $borderRadius;
 
-    position: relative;
+    
     width: 80%;
-
+    
     .card3-wrap_phto {
-        width: 100px;
+        position: relative;
+        
+        width: 100%;
         img {
             object-fit: contain;
             border-radius: $borderRadius;

@@ -679,16 +679,16 @@ svg {
   line-height: 17px;
 }
 
-.inner-layout .right {
+.venue .inner-layout .right {
   position: relative;
   perspective: 1000px;
 }
-.inner-layout .right .picture {
+.venue .inner-layout .right .picture {
   transition: transform 1s;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
-.inner-layout .right .behind {
+.venue .inner-layout .right .behind {
   position: absolute;
   left: 0;
   top: 0;
@@ -699,16 +699,16 @@ svg {
   transform: rotateY(-180deg);
 }
 
-.inner-layout .left {
+.venue .inner-layout .left {
   position: relative;
   perspective: 1000px;
 }
-.inner-layout .left .picture {
+.venue .inner-layout .left .picture {
   transition: transform 1s;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
-.inner-layout .left .behind {
+.venue .inner-layout .left .behind {
   position: absolute;
   left: 0;
   top: 0;
@@ -735,11 +735,11 @@ svg {
 
 .card3-wrap {
   border-radius: 15px;
-  position: relative;
   width: 80%;
 }
 .card3-wrap .card3-wrap_phto {
-  width: 100px;
+  position: relative;
+  width: 100%;
 }
 .card3-wrap .card3-wrap_phto img {
   -o-object-fit: contain;
