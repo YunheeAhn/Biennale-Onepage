@@ -141,7 +141,7 @@ html, body {
 
 body {
   font-size: 20px;
-  letter-spacing: -0.4px;
+  letter-spacing: 1.4ppx;
   font-weight: 700;
   line-height: 1.2;
   font-family: "Neutral Face", sans-serif, "맑은 고딕", sans-serif;
@@ -287,7 +287,7 @@ legend {
 }
 
 body {
-  background: #561731;
+  background: #FF6B58;
   overscroll-behavior: none;
   scroll-behavior: auto;
 }
@@ -467,11 +467,13 @@ svg {
   width: 100%;
 }
 
-.left {
+.left,
+.leftt {
   margin-right: auto;
 }
 
-.right {
+.right,
+.rightt {
   margin-left: auto;
 }
 
@@ -521,9 +523,6 @@ svg {
   padding: 60px;
   width: 50%;
   height: auto;
-}
-.card :hover {
-  transform: scale(10, 10);
 }
 .card .card_inner .card-date {
   display: inline-block;
@@ -679,16 +678,16 @@ svg {
   line-height: 17px;
 }
 
-.venue .inner-layout .right {
+.inner-layout .rightt {
   position: relative;
   perspective: 1000px;
 }
-.venue .inner-layout .right .picture {
+.inner-layout .rightt .picture {
   transition: transform 1s;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
-.venue .inner-layout .right .behind {
+.inner-layout .rightt .behind {
   position: absolute;
   left: 0;
   top: 0;
@@ -696,19 +695,18 @@ svg {
   transform-style: preserve-3d;
   z-index: -1;
   perspective: 1;
-  transform: rotateY(-180deg);
 }
 
-.venue .inner-layout .left {
+.inner-layout .leftt {
   position: relative;
   perspective: 1000px;
 }
-.venue .inner-layout .left .picture {
+.inner-layout .leftt .picture {
   transition: transform 1s;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
-.venue .inner-layout .left .behind {
+.inner-layout .leftt .behind {
   position: absolute;
   left: 0;
   top: 0;
@@ -716,44 +714,43 @@ svg {
   transform-style: preserve-3d;
   z-index: -1;
   perspective: 1;
-  transform: rotateY(180deg);
 }
 
-.right:hover .picture {
+.hoverR .picture {
   transform: rotateY(180deg);
 }
-.right:hover .behind {
+.hoverR .behind {
   transform: rotateY(0deg);
 }
 
-.left:hover .picture {
+.hoverL .picture {
   transform: rotateY(-180deg);
 }
-.left:hover .behind {
+.hoverL .behind {
   transform: rotateY(0deg);
 }
 
 .card3-wrap {
   border-radius: 15px;
-  width: 80%;
+  width: 50%;
+  position: relative;
 }
 .card3-wrap .card3-wrap_phto {
-  position: relative;
-  width: 100%;
+  margin-left: auto;
 }
 .card3-wrap .card3-wrap_phto img {
-  -o-object-fit: contain;
-     object-fit: contain;
   border-radius: 15px;
+  width: 100%;
 }
-.card3-wrap .card3-wrap_phto p {
-  position: absolute;
-  right: 60px;
-  bottom: 60px;
+.card3-wrap p {
   color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
 }
 
 .title-fixed {
@@ -814,5 +811,83 @@ svg {
 }
 #footer .footer-item {
   width: 33.3%;
+  color: #92EB1F;
+}
+#footer .footer-item .footer-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+#footer .footer-item .footer-title::after {
+  display: block;
+  content: "\f178";
+  font-family: "Font Awesome 6 free";
+  font-weight: 900;
+}
+#footer .footer-item .footer-item__inner {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  height: auto;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-list .list-item {
+  margin-bottom: 10px;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-contactlist {
+  display: flex;
+  align-items: flex-end;
+  gap: 8%;
+  height: 120px;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-contactlist .contactlist-item.t a::before {
+  display: block;
+  content: "\e61b";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-contactlist .contactlist-item.f a::before {
+  display: block;
+  content: "\f09a";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-contactlist .contactlist-item.y a::before {
+  display: block;
+  content: "\f167";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-contactlist .contactlist-item.i a::before {
+  display: block;
+  content: "\e055";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-contactlist .contactlist-item.l a::before {
+  display: block;
+  content: "\f08c";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+#footer .footer-item .footer-item__inner .footer-item__inner-contactlist .contactlist-item a {
   color: #92EB1F;
 }/*# sourceMappingURL=comm.css.map */

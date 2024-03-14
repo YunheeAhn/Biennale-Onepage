@@ -1,7 +1,7 @@
 @import "variables", "mixins", "fonts", "resets";
 
 body {
-    background: $Back-DarkPink;
+    background: $Sub-Orange;
     overscroll-behavior: none;
     scroll-behavior: auto;
 }
@@ -234,10 +234,12 @@ svg {
 }
 
 // 첫번째 섹션카드
-.left {
+.left,
+.leftt {
     margin-right: auto;
 }
-.right {
+.right,
+.rightt {
     margin-left: auto;
 }
 .card.art {
@@ -286,10 +288,6 @@ svg {
     padding: 60px;
     width: 50%;
     height: auto;
-
-    :hover {
-        transform: scale(10,10);
-    }
 
     .card_inner {
         
@@ -472,9 +470,9 @@ svg {
 }
 
 // 두 번째 섹션 카드 애니메이션
-.venue {
-    .inner-layout  {
-    .right {
+
+.inner-layout  {
+    .rightt {
         position: relative;
         perspective: 1000px;
 
@@ -491,37 +489,52 @@ svg {
             transform-style: preserve-3d;
             z-index: -1;
             perspective: 1;
-            transform: rotateY(-180deg);
+            // transform: rotateY(-180deg);
         }
     }
 }
-}
-.venue {
-    .inner-layout  {
-        .left {
-            position: relative;
-            perspective: 1000px;
+
+.inner-layout  {
+    .leftt {
+        position: relative;
+        perspective: 1000px;
     
-            .picture {
-                transition: transform 1s;
-                backface-visibility: hidden;
-                transform-style: preserve-3d;
-            }
-            .behind {
-                position: absolute;
-                left: 0;
-                top: 0;
-                transition: transform 1s;
-                transform-style: preserve-3d;
-                z-index: -1;
-                perspective: 1;
-                transform: rotateY(180deg);
-            }
+        .picture {
+            transition: transform 1s;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+        .behind {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            z-index: -1;
+            perspective: 1;
+            // transform: rotateY(180deg);
         }
     }
 }
-// gsap으로 변경하기
-.right:hover {
+
+// .rightt:hover {
+//     .picture {
+//         transform: rotateY(180deg);
+//     }
+//     .behind {
+//         transform: rotateY(0deg);
+//     }
+// }
+// .leftt:hover {
+//     .picture {
+//         transform: rotateY(-180deg);
+//     }
+//     .behind {
+//         transform: rotateY(0deg);
+//     }
+// }
+
+.hoverR {
     .picture {
         transform: rotateY(180deg);
     }
@@ -529,7 +542,7 @@ svg {
         transform: rotateY(0deg);
     }
 }
-.left:hover {
+.hoverL {
     .picture {
         transform: rotateY(-180deg);
     }
@@ -539,33 +552,32 @@ svg {
 }
 
 
-// 세번쨰 섹션
+// 세번쨰 섹션 //다시수정하자
 .card3-wrap {
     border-radius: $borderRadius;
 
-    
-    width: 80%;
+    width: 50%;
+    position: relative;
     
     .card3-wrap_phto {
-        position: relative;
-        
-        width: 100%;
-        img {
-            object-fit: contain;
-            border-radius: $borderRadius;
-        }
-        p {
-            position: absolute;
-            right: 60px;
-            bottom: 60px;
+        margin-left: auto;
 
-            color: $white;
-            @include cardFrontTitle36
+        img {
+            border-radius: $borderRadius;
+            width: 100%;
         }
     }
+    p {
+        color: $white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+        @include cardFrontTitle36;
+
+        position: absolute;
+        bottom: 60px;
+        right: 60px;        
+    }
 }
-
-
 // 타이틀텍스트 레이아웃
 .title-fixed{
     mix-blend-mode: color-dodge;
@@ -637,5 +649,100 @@ svg {
         width: 33.3%;
 
         color: $Main-Green;
+
+        .footer-title {
+            @include cardFrontTitle36;
+
+            margin-bottom: 90px;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 15px;
+        }
+        .footer-title::after {
+            display: block;
+            content: '\f178';
+            font-family: "Font Awesome 6 free";
+            font-weight: 900;
+        }
+
+        .footer-item__inner {
+            @include cardBackDesc14;
+            height: auto;
+
+
+            .footer-item__inner-list {
+                .list-item {
+                    margin-bottom: 10px;
+                }
+            }
+            .footer-item__inner-contactlist {
+                display: flex;
+                align-items: flex-end;
+
+                gap: 8%;
+                height: 120px;
+
+                .contactlist-item {
+                    &.t {
+                        a::before {
+                            display: block;
+                            content: '\e61b';
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 30px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    &.f {
+                        a::before {
+                            display: block;
+                            content: '\f09a';
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 30px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    &.y {
+                        a::before {
+                            display: block;
+                            content: '\f167';
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 30px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    &.i {
+                        a::before {
+                            display: block;
+                            content: '\e055';
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 30px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    &.l {
+                        a::before {
+                            display: block;
+                            content: '\f08c';
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 30px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    a {
+                        color: $Main-Green;
+                    }
+                }
+            }
+        }
     }
 }
