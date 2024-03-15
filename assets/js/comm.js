@@ -62,4 +62,29 @@ document.addEventListener("DOMContentLoaded", function() {
     clickBtnsL.forEach(btn => {
         btn.addEventListener('click', doFlipL);
     });
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    const sections = document.querySelectorAll('.page-section')
+
+    gsap.utils.toArray(sections).forEach((item)=>{
+        let color = item.getAttribute('data-bgcolor')
+
+        ScrollTrigger.create({
+            trigger : item,
+            start : "top 50%",
+            end : "bottom 5%",
+
+            onEnter : () => gsap.to('body',{
+                backgroundColor : color,
+                duration : .4
+            }),
+            onEnterBack : () => gsap.to('body',{
+                backgroundColor:color,
+                duration :.4
+            })
+        })
+    })
+
+
 });

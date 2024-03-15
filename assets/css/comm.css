@@ -287,7 +287,7 @@ legend {
 }
 
 body {
-  background: #FF6B58;
+  background: #92EB1F;
   overscroll-behavior: none;
   scroll-behavior: auto;
 }
@@ -622,6 +622,7 @@ svg {
   padding: 60px;
 }
 .venues-wrap .card2.behind .card2_inner {
+  width: 100%;
   color: #ffffff;
   display: inline-flex;
   flex-direction: column;

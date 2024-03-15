@@ -1,7 +1,7 @@
 @import "variables", "mixins", "fonts", "resets";
 
 body {
-    background: $Sub-Orange;
+    background: $Main-Green;
     overscroll-behavior: none;
     scroll-behavior: auto;
 }
@@ -14,6 +14,7 @@ svg {
     max-width: 100%;
     max-height: 100%;
 }
+
 // // 다시 재설정 예정
 // .inset {
 //     inset: 0;
@@ -407,6 +408,7 @@ svg {
         padding: 60px;
 
         .card2_inner {
+            width: 100%;
             color: $white;
 
             display: inline-flex;
