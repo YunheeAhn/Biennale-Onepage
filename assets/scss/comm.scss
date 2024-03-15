@@ -491,7 +491,6 @@ svg {
             transform-style: preserve-3d;
             z-index: -1;
             perspective: 1;
-            // transform: rotateY(-180deg);
         }
     }
 }
@@ -514,27 +513,10 @@ svg {
             transform-style: preserve-3d;
             z-index: -1;
             perspective: 1;
-            // transform: rotateY(180deg);
         }
     }
 }
 
-// .rightt:hover {
-//     .picture {
-//         transform: rotateY(180deg);
-//     }
-//     .behind {
-//         transform: rotateY(0deg);
-//     }
-// }
-// .leftt:hover {
-//     .picture {
-//         transform: rotateY(-180deg);
-//     }
-//     .behind {
-//         transform: rotateY(0deg);
-//     }
-// }
 
 .hoverR {
     .picture {
@@ -599,15 +581,19 @@ svg {
 
 .title-fixed svg {
     transform: rotate(-90deg);
-    scale: .75;
-    overflow: unset
+    scale: 1.4;
+    overflow: unset;
+    margin: 0 auto;
+    z-index: 10000;
+
+    
 }
 
-@media (max-width: 860px) {
-    .title-fixed svg {
-        scale:.6
-    }
-}
+// @media (max-width: 860px) {
+//     .title-fixed svg {
+//         scale:.6
+//     }
+// }
 
 .title-fixed--inView {
     transition: .5s ease-out;
@@ -616,7 +602,7 @@ svg {
 }
 
 .title-fixed.hidden {
-    opacity: 0;
+    // opacity: 0;
     transition: opacity .5s ease-out
 }
 

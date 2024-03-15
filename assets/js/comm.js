@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.addEventListener('click', doFlipL);
     });
 
+    // 스크롤 트리거 배경색 바꾸기
     gsap.registerPlugin(ScrollTrigger)
 
     const sections = document.querySelectorAll('.page-section')
@@ -85,6 +86,43 @@ document.addEventListener("DOMContentLoaded", function() {
             })
         })
     })
+
+    // 스크롤 트리거 타이틀 텍스트 바꾸기
+    const onText = [
+        {id : '#Department'},
+        {id : '#Venues'},
+        {id : '#Archive'}
+
+    ]
+    const changeText = [
+        {id : '#department'},
+        {id : '#venues'},
+        {id : '#archive'}
+    ]
+
+    // map함수로 id값 추출하기
+    const onTextId = onText.map(item => item.id);
+    const changeTextId = changeText.map(item => item.id);
+
+    onTextId.forEach((id, index) => {
+
+        const onChangeText = document.querySelector(id);
+        const changeID = document.querySelector(changeTextId[index]);
+
+        ScrollTrigger.create({
+            trigger: onChangeText,
+            start: "top 50%",
+            bottom : "bottom 5%", 
+            onLeave: () => {
+                gsap.to(changeID, { opacity: 1, duration: 0.5 });
+            },
+            onLeaveBack: () => {
+                gsap.to(changeID, { opacity: 0, duration: 0.5 });
+            },
+            
+        });
+    });
+    
 
 
 });

@@ -771,15 +771,12 @@ svg {
 
 .title-fixed svg {
   transform: rotate(-90deg);
-  scale: 0.75;
+  scale: 1.4;
   overflow: unset;
+  margin: 0 auto;
+  z-index: 10000;
 }
 
-@media (max-width: 860px) {
-  .title-fixed svg {
-    scale: 0.6;
-  }
-}
 .title-fixed--inView {
   transition: 0.5s ease-out;
   transform: translateY(30px);
@@ -787,7 +784,6 @@ svg {
 }
 
 .title-fixed.hidden {
-  opacity: 0;
   transition: opacity 0.5s ease-out;
 }
 
