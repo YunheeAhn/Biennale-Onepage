@@ -292,6 +292,11 @@ body {
   scroll-behavior: auto;
 }
 
+@media (min-width: 861px) {
+  body {
+    font-size: 37px;
+  }
+}
 .page-section {
   position: relative;
 }
@@ -322,8 +327,8 @@ svg {
   height: 120px;
   border-radius: 13px;
   background: rgba(255, 255, 255, 0.1843137255);
-  backdrop-filter: saturate(1000%) blur(10px);
   -webkit-backdrop-filter: saturate(1000%) blur(10px);
+          backdrop-filter: saturate(1000%) blur(10px);
   transition: background-color 0.2s ease-out;
   font-size: 22px;
   font-weight: 400;
@@ -341,6 +346,17 @@ svg {
   padding: 15px;
 }
 
+@media (max-width: 1000px) {
+  #header h1 {
+    font-size: 18px;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+  }
+  #nav {
+    font-size: 18px;
+  }
+}
 #nav ul {
   display: flex;
   flex-direction: row;
@@ -463,6 +479,11 @@ svg {
   color: currentColor;
 }
 
+@media (max-width: 860px) {
+  .layout--scroll {
+    min-height: 60vh;
+  }
+}
 .layout:last-child {
   margin-bottom: 0;
   padding-bottom: 120px;
@@ -473,6 +494,15 @@ svg {
   top: 160px;
 }
 
+@media (max-width: 860px) {
+  .layout {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .layout--scroll > * {
+    top: 120px;
+  }
+}
 .page-section__details {
   min-height: auto;
   margin: 30px 30px 0;
@@ -484,6 +514,18 @@ svg {
   width: 100%;
 }
 
+@media (max-width: 1000px) {
+  .page-section__details {
+    margin: 10px 10px;
+    padding: 100px 0 50px;
+  }
+}
+@media (max-width: 860px) {
+  .page-section__details {
+    margin: 10px 10px 0;
+    padding: 100px 0 50px;
+  }
+}
 .left,
 .leftt {
   margin-right: auto;
@@ -580,6 +622,35 @@ svg {
   margin-left: auto;
 }
 
+@media (max-width: 1000px) {
+  .page-section__details {
+    margin: 10px 10px;
+    padding: 100px 0 50px;
+  }
+  .left,
+  .leftt {
+    margin-right: 0;
+  }
+  .right,
+  .rightt {
+    margin-left: 0;
+  }
+}
+@media (max-width: 860px) {
+  .left,
+  .leftt {
+    margin-right: none;
+  }
+  .right,
+  .rightt {
+    margin-left: none;
+  }
+  .card {
+    margin: 10px 10px 0;
+    padding: 100px 0 50px;
+    width: 100%;
+  }
+}
 .venues-wrap {
   width: 50%;
   position: relative;
@@ -626,9 +697,11 @@ svg {
 }
 .venues-wrap .card2.picture .card2_inner .inner-wrap .change-button a::before {
   display: block;
-  content: "\f054";
+  content: "\f105";
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
   color: #0A0323;
 }
 .venues-wrap .card2.behind {
@@ -665,7 +738,10 @@ svg {
   content: "\f054";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
+  width: 30px;
+  height: 30px;
   color: #0A0323;
+  transform: rotateY("180deg");
 }
 .venues-wrap .card2.behind .card2_inner .card2_inner-top .top-title {
   padding: 5px 15px;
@@ -696,6 +772,17 @@ svg {
   line-height: 17px;
 }
 
+@media (max-width: 1100px) {
+  .venues-wrap {
+    margin: 10px 0;
+    gap: 10px;
+    max-width: 860px;
+    width: 100%;
+  }
+  .venues-wrap .card2 {
+    width: 100%;
+  }
+}
 .inner-layout .rightt {
   position: relative;
   perspective: 1000px;
@@ -794,6 +881,11 @@ svg {
   z-index: 1000000;
 }
 
+@media (max-width: 860px) {
+  .title-fixed svg {
+    scale: 0.8;
+  }
+}
 .title-fixed--inView {
   transition: 0.5s ease-out;
   transform: translateY(30px);

@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         ScrollTrigger.create({
             trigger: onChangeText,
-            start: "top 50%",
+            start: "top 5%",
             bottom : "bottom 5%",
             scrub : true,
             onEnter: () => {
