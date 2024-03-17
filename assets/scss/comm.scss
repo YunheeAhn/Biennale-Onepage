@@ -13,6 +13,10 @@ svg {
     display: block;
     max-width: 100%;
     max-height: 100%;
+    z-index: 100000;
+    mix-blend-mode: difference;
+    color : currentColor;
+
 }
 
 // // 다시 재설정 예정
@@ -181,8 +185,26 @@ svg {
                     height: 100%;
                     color: $Main-Pink;
 
-                    svg {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100vh;
+
+                    #main01, #big01, #main02, #big02 {
                         opacity: 0;
+                        scale : 1.2;
+
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100vh;
+
+                        transition: opacity .5s ease-out;
+                    }
+                    #main01, #main02 {
+                        scale : 2;
+                        top : 100px;
+                        transition: opacity .5s ease-out;
                     }
                 }
             }
@@ -199,15 +221,15 @@ svg {
     padding: 150px 100px 15px 100px;
     margin: 10px;
     margin-bottom: none;
-
-    p {
-        color: white;
-    }
+    mix-blend-mode: difference;
+    color : currentColor;
 }
+
 .layout--scroll {
     min-height: 100vh;
 
     @include titleDesc48;
+    color: currentColor
 }
 .layout:last-child {
     margin-bottom: 0;
@@ -564,7 +586,7 @@ svg {
 }
 // 타이틀텍스트 레이아웃
 .title-fixed{
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: difference;
     position: fixed;
     top: 0;
     width: 100%;
@@ -584,9 +606,7 @@ svg {
     scale: 1.4;
     overflow: unset;
     margin: 0 auto;
-    z-index: 10000;
-
-    
+    z-index: 1000000;
 }
 
 // @media (max-width: 860px) {

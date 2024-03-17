@@ -300,6 +300,9 @@ svg {
   display: block;
   max-width: 100%;
   max-height: 100%;
+  z-index: 100000;
+  mix-blend-mode: difference;
+  color: currentColor;
 }
 
 #header {
@@ -420,9 +423,24 @@ svg {
   width: 100%;
   height: 100%;
   color: #FB2C82;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
 }
-.intro .intro-scroll__shape .intro-scroll__shape-transform .intro-scroll__shape-transform-wrap .intro-scroll__shape-transform-wrap-svg svg {
+.intro .intro-scroll__shape .intro-scroll__shape-transform .intro-scroll__shape-transform-wrap .intro-scroll__shape-transform-wrap-svg #main01, .intro .intro-scroll__shape .intro-scroll__shape-transform .intro-scroll__shape-transform-wrap .intro-scroll__shape-transform-wrap-svg #big01, .intro .intro-scroll__shape .intro-scroll__shape-transform .intro-scroll__shape-transform-wrap .intro-scroll__shape-transform-wrap-svg #main02, .intro .intro-scroll__shape .intro-scroll__shape-transform .intro-scroll__shape-transform-wrap .intro-scroll__shape-transform-wrap-svg #big02 {
   opacity: 0;
+  scale: 1.2;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 0.5s ease-out;
+}
+.intro .intro-scroll__shape .intro-scroll__shape-transform .intro-scroll__shape-transform-wrap .intro-scroll__shape-transform-wrap-svg #main01, .intro .intro-scroll__shape .intro-scroll__shape-transform .intro-scroll__shape-transform-wrap .intro-scroll__shape-transform-wrap-svg #main02 {
+  scale: 2;
+  top: 100px;
+  transition: opacity 0.5s ease-out;
 }
 
 .intro-text__wrap,
@@ -433,10 +451,8 @@ svg {
   padding: 150px 100px 15px 100px;
   margin: 10px;
   margin-bottom: none;
-}
-.intro-text__wrap p,
-.page-text__wrap p {
-  color: white;
+  mix-blend-mode: difference;
+  color: currentColor;
 }
 
 .layout--scroll {
@@ -444,6 +460,7 @@ svg {
   font-size: 48px;
   font-weight: 700;
   line-height: 52px;
+  color: currentColor;
 }
 
 .layout:last-child {
@@ -755,7 +772,7 @@ svg {
 }
 
 .title-fixed {
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: difference;
   position: fixed;
   top: 0;
   width: 100%;
@@ -774,7 +791,7 @@ svg {
   scale: 1.4;
   overflow: unset;
   margin: 0 auto;
-  z-index: 10000;
+  z-index: 1000000;
 }
 
 .title-fixed--inView {
