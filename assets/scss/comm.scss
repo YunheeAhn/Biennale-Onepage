@@ -5,11 +5,7 @@ body {
     overscroll-behavior: none;
     scroll-behavior: auto;
 }
-@media (min-width: 861px) {
-    body {
-        font-size:37px
-    }
-}
+
 
 // 페이지 레이아웃
 .page-section {
@@ -23,23 +19,7 @@ svg {
     mix-blend-mode: difference;
     color : currentColor;
 
-}
-
-// // 다시 재설정 예정
-// .inset {
-//     inset: 0;
-//     width: 100%;
-//     height: 100%;
-//     position: fixed;
-//     // overflow: hidden;
-
-//     .inset-transform {
-//         box-sizing: border-box;
-//         overflow: visible;
-//         width: 100%;
-//         // transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -25643, 0, 1);
-//     }
-// }
+}   
 
 // 상단 헤더
 #header {
@@ -86,20 +66,7 @@ svg {
         }
     }
 }
-@media (max-width: 1000px) {
-    #header {
-        h1 {
-            font-size: 18px;
 
-            top:30px;
-            left: 30px;
-            right: 30px
-        }
-    }
-    #nav {
-        font-size: 18px;
-    }
-}
 
 #nav {
     ul {
@@ -251,11 +218,7 @@ svg {
     @include titleDesc48;
     color: currentColor
 }
-@media (max-width: 860px) {
-    .layout--scroll {
-        min-height:60vh
-    }
-}
+
 .layout:last-child {
     margin-bottom: 0;
     padding-bottom: 120px;
@@ -264,16 +227,7 @@ svg {
     position: sticky;
     top: 160px;
 }
-@media (max-width: 860px) {
-    .layout {
-        margin-left:20px;
-        margin-right: 20px
-    }
 
-    .layout--scroll>* {
-        top: 120px
-    }
-}
 
 // 각 섹션 레이아웃
 .page-section__details {
@@ -290,18 +244,7 @@ svg {
         width: 100%;
     }
 }
-@media (max-width: 1000px) {
-    .page-section__details {
-        margin:10px 10px ;
-        padding: 100px 0 50px
-    }
-}
-@media (max-width: 860px) {
-    .page-section__details {
-        margin:10px 10px 0;
-        padding: 100px 0 50px
-    }
-}
+
 
 // 첫번째 섹션카드
 .left,
@@ -399,35 +342,7 @@ svg {
         }
     }
 }
-@media (max-width: 1000px) {
-    .page-section__details {
-        margin:10px 10px ;
-        padding: 100px 0 50px
-    }
-    .left,
-    .leftt {
-        margin-right: 0;
-    }
-    .right,
-    .rightt {
-        margin-left: 0;
-    }
-}
-@media (max-width: 860px) {
-    .left,
-    .leftt {
-        margin-right: none;
-    }
-    .right,
-    .rightt {
-        margin-left: none;
-    }
-    .card {
-        margin:10px 10px 0;
-        padding: 100px 0 50px;
-        width: 100%;
-    }
-}
+
 
 // 두번재 섹션 카드
 .venues-wrap {
@@ -576,22 +491,12 @@ svg {
     }
 }
 
-@media (max-width: 1100px) {
-    .venues-wrap {
-        margin: 10px 0;
-        gap : 10px;
-        max-width: 860px;
-        width: 100%;
 
-        .card2 {
-            width: 100%;
-        }
-    }
-}
 
 // 두 번째 섹션 카드 애니메이션
 
 .inner-layout  {
+    align-items: center;
     .rightt {
         position: relative;
         perspective: 1000px;
@@ -704,11 +609,7 @@ svg {
     margin: 0 auto;
     z-index: 1000000;
 }
-@media (max-width: 860px) {
-    .title-fixed svg {
-        scale:.8
-    }
-}
+
 
 // @media (max-width: 860px) {
 //     .title-fixed svg {
@@ -855,3 +756,5 @@ svg {
         }
     }
 }
+
+@import 'media';

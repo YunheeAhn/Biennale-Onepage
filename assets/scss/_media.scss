@@ -1,0 +1,77 @@
+@media (min-width: 861px) {
+    body {
+        font-size:37px
+    }
+}
+
+@media (max-width: 1000px) {
+    #header {
+        h1 {
+            font-size: 18px;
+
+            top:30px;
+            left: 30px;
+            right: 30px
+        }
+    }
+    #nav {
+        font-size: 18px;
+    }
+    .page-section__details {
+        margin:10px 10px ;
+        padding: 100px 0 50px
+    }
+    .left,
+    .leftt {
+        margin-right: 0;
+    }
+    .right,
+    .rightt {
+        margin-left: 0;
+    }
+
+    .venues-wrap {
+        margin: 10px 0;
+        gap : 10px;
+        max-width: 860px;
+        width: 100%;
+
+        .card2 {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 860px) {
+    .layout {
+        margin-left:20px;
+        margin-right: 20px
+    }
+    .layout--scroll {
+        min-height:60vh
+    }
+    .layout--scroll>* {
+        top: 120px
+    }
+    .page-section__details {
+        margin:10px 10px 0;
+        padding: 100px 0 50px
+    }
+    .left,
+    .leftt {
+        margin-right: none;
+    }
+    .right,
+    .rightt {
+        margin-left: none;
+    }
+    .card {
+        margin:10px 10px 0;
+        padding: 100px 0 50px;
+        width: 100%;
+    }
+
+    .title-fixed svg {
+        scale:.8
+    }
+}
+
