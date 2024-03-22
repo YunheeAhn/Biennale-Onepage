@@ -167,5 +167,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     window.addEventListener("load", animateSVGs);
 
+    // 네브바 클릭시 이동
+    document.querySelectorAll('#nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+
     
 });
