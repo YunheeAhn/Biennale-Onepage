@@ -700,6 +700,8 @@ svg {
   content: "\f105";
   font-family: "Font Awesome 6 Free";
   font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
   width: 20px;
   height: 20px;
   color: #0A0323;
