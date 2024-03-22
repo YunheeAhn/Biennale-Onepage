@@ -952,6 +952,32 @@ svg {
   .venues-wrap .card2 {
     width: 100%;
   }
+  .card3-wrap {
+    margin: 10px 0;
+    gap: 10px;
+    max-width: 860px;
+    width: 100%;
+  }
+  .card {
+    margin: 10px 0;
+    gap: 10px;
+    max-width: 860px;
+    width: 100%;
+  }
+  #footer .footer-item .footer-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  #footer .footer-item__inner .footer-item__inner-list .list-item {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+  #footer .footer-item__inner-contactlist {
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 860px) {
   .layout {
@@ -976,12 +1002,22 @@ svg {
   .rightt {
     margin-left: none;
   }
-  .card {
-    margin: 10px 10px 0;
-    padding: 100px 0 50px;
-    width: 100%;
-  }
   .title-fixed svg {
     scale: 0.8;
+  }
+  #footer {
+    display: flex;
+    flex-direction: column;
+  }
+  #footer .footer-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #footer .footer-item .footer-title {
+    margin-bottom: 20px;
+  }
+  #footer .footer-item .footer-item__inner .footer-item__inner-contactlist {
+    height: auto;
   }
 }/*# sourceMappingURL=comm.css.map */
