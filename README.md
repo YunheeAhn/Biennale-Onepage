@@ -1,6 +1,6 @@
 
 <!-- markdownlint-disable MD033 -->
-******la vanezia di bbiennn******
+******LA BIENNALE DI VENEZIA******
 
 <h1 align="center"> 🎨 2024 베네치아 비엔날레 홈페이지 </h1>
 <br>
