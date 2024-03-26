@@ -1,6 +1,6 @@
 
 <!-- markdownlint-disable MD033 -->
-<img src="/" width="15%">
+<p font-size="48px" font-weight="bold">LA BIENNALE DI VENEZIA</p>
 
 <h1 align="center"> 🎨 2024 베네치아 비엔날레 홈페이지 </h1>
 <br>
